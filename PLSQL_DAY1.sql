@@ -35,11 +35,13 @@ begin
     dbms_output.put_line('fetched first name : '|| v_fname || ' and last name is : ' ||v_lname);
 end;
 /
---select first_name,last_name from employees;
+
+-- 5 Anchored Datatype
 --Anchored datatypes: they are better than normal variables
 --Question Why ?
 --Answer: variable type and length is not hard-coded, and it gives the program flexibility to run independent for any 
 --datatype change or length change.
+--select first_name,last_name from employees;
 set serveroutput on
 declare
     v_fname EMPLOYEES.FIRST_NAME%TYPE;
@@ -49,3 +51,11 @@ begin
     dbms_output.put_line('First Name is ' || v_fname || ' and last name is '||v_lname);
 end;
 /
+-- Constants
+set serveroutput on
+declare
+    v_pi number:=3.141;
+begin
+    dbms_output.put_line('Value of pi is '||v_pi);
+ end;
+ /
