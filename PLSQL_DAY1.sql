@@ -54,7 +54,7 @@ end;
 -- Constants
 set serveroutput on
 declare
-    v_pi number:=3.141;
+    v_pi constant number:=3.141;
 begin
     dbms_output.put_line('Value of pi is '||v_pi);
  end;
